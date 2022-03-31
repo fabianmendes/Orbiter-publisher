@@ -51,3 +51,19 @@ for i in range(int(len(a)/2) -1):
     #finally:
     #    print(b)
     
+
+class Entradas:  # de blog.
+    def __init__(self, link, password, user, message):
+        
+        self.arturl = link
+        self.title = ""
+        self.texto = ""
+        self.tags = []  # sacados del titulo. len>2
+        self.extracto = ""  # Nose aun, primer paraph
+        
+        self.category = '' #Mundo
+        self.img = ''  # link.
+        
+        
+        
+        
