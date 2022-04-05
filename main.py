@@ -42,12 +42,23 @@ hell.click()
 hell.send_keys(password)
 hell.send_keys(Keys.ENTER)
 
+newentry_xpath = '//*[@id="wp-admin-bar-new-content"]'
 WebDriverWait(driver, 20).until(
     expected_conditions.
         presence_of_element_located((By.XPATH,
-        '//*[@id="editor"]/div[1]/div[1]/div[2]/div[2]')))
-
-
-
+                                     newentry_xpath)))
 # DONE. We are in! Now let's write.
 # ------------------
+driver.find_element_by_xpath(newentry_xpath).click()
+
+try:
+    pop_up = driver.find_element_by_xpath(
+    '/html/body/div[5]/div/div/div/div/div/div[1]/button')
+    if pop_up:
+        pop_up.click()
+finally:
+    print('Pop-up on New Entry CHECKED.')
+#except:
+#    print('None pop-up showed')
+# ---- LET'S PASTE NOW!
+
