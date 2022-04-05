@@ -45,7 +45,8 @@ hell.send_keys(Keys.ENTER)
 WebDriverWait(driver, 20).until(
     expected_conditions.
         presence_of_element_located((By.XPATH,
-                                     '//*[@id="editor"]/div[1]/div[1]/div[2]/div[2]')))
+        '//*[@id="editor"]/div[1]/div[1]/div[2]/div[2]')))
+
 
 
 # DONE. We are in! Now let's write.
